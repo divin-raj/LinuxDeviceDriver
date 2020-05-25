@@ -1,0 +1,90 @@
+\hypertarget{_sample_drv_8c}{}\section{/home/dvn/\+Git-\/\+Repository/\+Linux/\+Linux\+Device\+Driver/sample\+\_\+0/\+Sample\+Drv.c File Reference}
+\label{_sample_drv_8c}\index{/home/dvn/\+Git-\/\+Repository/\+Linux/\+Linux\+Device\+Driver/sample\+\_\+0/\+Sample\+Drv.\+c@{/home/dvn/\+Git-\/\+Repository/\+Linux/\+Linux\+Device\+Driver/sample\+\_\+0/\+Sample\+Drv.\+c}}
+
+
+This file implements a smple testing sample module $\ast$.  
+
+
+{\ttfamily \#include $<$linux/module.\+h$>$}\\*
+{\ttfamily \#include $<$linux/kernel.\+h$>$}\\*
+{\ttfamily \#include $<$linux/init.\+h$>$}\\*
+Include dependency graph for Sample\+Drv.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_sample_drv_8c_a27fcfb199210c306c627e1b5f2389eaf}{module\+\_\+init} (Init\+Drv)
+\item 
+\hyperlink{_sample_drv_8c_a1212a8b9c1bac6ccfcaa24a7259a6d52}{module\+\_\+exit} (Remove\+Drv)
+\item 
+\hyperlink{_sample_drv_8c_ad94b36675e7eb067ea3ce6ff9e244a44}{M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+SE} (\char`\"{}G\+PL\char`\"{})
+\item 
+\hyperlink{_sample_drv_8c_a9e21857e0ed7e3c0000f83c5f3ab1436}{M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+OR} (\char`\"{}Divin Raj\char`\"{})
+\item 
+\hyperlink{_sample_drv_8c_afed2e0f612979f50d519e103a6a186f4}{M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON} (\char`\"{}Simple Device driver\char`\"{})
+\item 
+\hyperlink{_sample_drv_8c_a0a436a417572037df486b08a286a76f9}{M\+O\+D\+U\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON} (\char`\"{}v.\+1.\+0\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file implements a smple testing sample module $\ast$. 
+
+
+
+
+\begin{DoxyItemize}
+\item 
+\item \begin{DoxyAuthor}{Author}
+\href{mailto:divinraj1994@gmail.com}{\tt divinraj1994@gmail.\+com} $\ast$ 
+\end{DoxyAuthor}
+
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\index{Sample\+Drv.\+c@{Sample\+Drv.\+c}!M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+OR@{M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+OR}}
+\index{M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+OR@{M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+OR}!Sample\+Drv.\+c@{Sample\+Drv.\+c}}
+\subsubsection[{\texorpdfstring{M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+O\+R(""Divin Raj"")}{MODULE_AUTHOR("Divin Raj")}}]{\setlength{\rightskip}{0pt plus 5cm}M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+OR (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}Divin Raj\char`\"{}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_sample_drv_8c_a9e21857e0ed7e3c0000f83c5f3ab1436}{}\label{_sample_drv_8c_a9e21857e0ed7e3c0000f83c5f3ab1436}
+\index{Sample\+Drv.\+c@{Sample\+Drv.\+c}!M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON@{M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}}
+\index{M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON@{M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}!Sample\+Drv.\+c@{Sample\+Drv.\+c}}
+\subsubsection[{\texorpdfstring{M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+O\+N(""Simple Device driver"")}{MODULE_DESCRIPTION("Simple Device driver")}}]{\setlength{\rightskip}{0pt plus 5cm}M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}Simple Device driver\char`\"{}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_sample_drv_8c_afed2e0f612979f50d519e103a6a186f4}{}\label{_sample_drv_8c_afed2e0f612979f50d519e103a6a186f4}
+\index{Sample\+Drv.\+c@{Sample\+Drv.\+c}!module\+\_\+exit@{module\+\_\+exit}}
+\index{module\+\_\+exit@{module\+\_\+exit}!Sample\+Drv.\+c@{Sample\+Drv.\+c}}
+\subsubsection[{\texorpdfstring{module\+\_\+exit(\+Remove\+Drv)}{module_exit(RemoveDrv)}}]{\setlength{\rightskip}{0pt plus 5cm}module\+\_\+exit (
+\begin{DoxyParamCaption}
+\item[{Remove\+Drv}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_sample_drv_8c_a1212a8b9c1bac6ccfcaa24a7259a6d52}{}\label{_sample_drv_8c_a1212a8b9c1bac6ccfcaa24a7259a6d52}
+\index{Sample\+Drv.\+c@{Sample\+Drv.\+c}!module\+\_\+init@{module\+\_\+init}}
+\index{module\+\_\+init@{module\+\_\+init}!Sample\+Drv.\+c@{Sample\+Drv.\+c}}
+\subsubsection[{\texorpdfstring{module\+\_\+init(\+Init\+Drv)}{module_init(InitDrv)}}]{\setlength{\rightskip}{0pt plus 5cm}module\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{Init\+Drv}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_sample_drv_8c_a27fcfb199210c306c627e1b5f2389eaf}{}\label{_sample_drv_8c_a27fcfb199210c306c627e1b5f2389eaf}
+
+
+  Init and Exit Macro $\ast$ \index{Sample\+Drv.\+c@{Sample\+Drv.\+c}!M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+SE@{M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+SE}}
+\index{M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+SE@{M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+SE}!Sample\+Drv.\+c@{Sample\+Drv.\+c}}
+\subsubsection[{\texorpdfstring{M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+S\+E(""G\+PL"")}{MODULE_LICENSE("GPL")}}]{\setlength{\rightskip}{0pt plus 5cm}M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+SE (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}G\+PL\char`\"{}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_sample_drv_8c_ad94b36675e7eb067ea3ce6ff9e244a44}{}\label{_sample_drv_8c_ad94b36675e7eb067ea3ce6ff9e244a44}
+
+
+  Informations $\ast$ \index{Sample\+Drv.\+c@{Sample\+Drv.\+c}!M\+O\+D\+U\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON@{M\+O\+D\+U\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}
+\index{M\+O\+D\+U\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON@{M\+O\+D\+U\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON}!Sample\+Drv.\+c@{Sample\+Drv.\+c}}
+\subsubsection[{\texorpdfstring{M\+O\+D\+U\+L\+E\+\_\+\+V\+E\+R\+S\+I\+O\+N(""v.\+1.\+0"")}{MODULE_VERSION("v.1.0")}}]{\setlength{\rightskip}{0pt plus 5cm}M\+O\+D\+U\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}v.\+1.\+0\char`\"{}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_sample_drv_8c_a0a436a417572037df486b08a286a76f9}{}\label{_sample_drv_8c_a0a436a417572037df486b08a286a76f9}

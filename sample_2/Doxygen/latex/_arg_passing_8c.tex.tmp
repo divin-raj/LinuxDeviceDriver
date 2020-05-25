@@ -1,0 +1,236 @@
+\hypertarget{_arg_passing_8c}{}\section{/home/dvn/\+Git-\/\+Repository/\+Linux/\+Linux\+Device\+Driver/sample\+\_\+2/\+Arg\+Passing.c File Reference}
+\label{_arg_passing_8c}\index{/home/dvn/\+Git-\/\+Repository/\+Linux/\+Linux\+Device\+Driver/sample\+\_\+2/\+Arg\+Passing.\+c@{/home/dvn/\+Git-\/\+Repository/\+Linux/\+Linux\+Device\+Driver/sample\+\_\+2/\+Arg\+Passing.\+c}}
+
+
+This file implements a sample testing programe for passing arguments $\ast$.  
+
+
+{\ttfamily \#include $<$linux/init.\+h$>$}\\*
+{\ttfamily \#include $<$linux/fs.\+h$>$}\\*
+{\ttfamily \#include $<$linux/module.\+h$>$}\\*
+{\ttfamily \#include $<$linux/moduleparam.\+h$>$}\\*
+Include dependency graph for Arg\+Passing.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_arg_passing_8c_a1a25deaba82e340ee1aba6e1f9acd105}{B\+A\+S\+E\+\_\+\+M\+I\+N\+O\+R\+N\+U\+M\+B\+ER}~1u
+\item 
+\#define \hyperlink{_arg_passing_8c_a15be72134606fa2aae7ce204e75af62a}{M\+I\+N\+O\+R\+N\+U\+M\+B\+E\+R\+\_\+\+R\+A\+N\+GE}~1u
+\item 
+\#define \hyperlink{_arg_passing_8c_a1e7cc741c56207a8872ea58373276925}{E\+\_\+\+OK}~0u
+\item 
+\#define \hyperlink{_arg_passing_8c_a1d155fa7a571f569a380bb42b1947eb4}{E\+\_\+\+N\+O\+T\+\_\+\+OK}~1u
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_arg_passing_8c_a971a1e45364b44adbd606d1079c0ba8a}{param\+Set\+\_\+\+Notify} (const char $\ast$val, const struct kernel\+\_\+param $\ast$kp)
+\begin{DoxyCompactList}\small\item\em Handler to notify when variable value get changed $\ast$ $\ast$. \end{DoxyCompactList}\item 
+\hyperlink{_arg_passing_8c_adf7a4e51490ae824f3e7a3b53049d6a1}{module\+\_\+param} (\hyperlink{_arg_passing_8c_a23b7c31b2f6c188e1c281f7be7473f23}{int\+Value}, int, S\+\_\+\+I\+W\+U\+SR$\vert$S\+\_\+\+I\+R\+U\+SR)
+\item 
+\hyperlink{_arg_passing_8c_a493ed86a0f80ad11a1bde0aee8b4f69e}{module\+\_\+param} (\hyperlink{_arg_passing_8c_a546284a803e6b34e756d45641fae2a2f}{str\+Name}, charp, S\+\_\+\+I\+W\+U\+SR$\vert$S\+\_\+\+I\+R\+U\+SR$\vert$S\+\_\+\+I\+X\+U\+SR$\vert$S\+\_\+\+I\+W\+G\+RP$\vert$S\+\_\+\+I\+R\+G\+RP$\vert$S\+\_\+\+I\+X\+G\+RP)
+\item 
+\hyperlink{_arg_passing_8c_a6af02987c05ea1fa1026248f1ce1518b}{module\+\_\+param\+\_\+array} (\hyperlink{_arg_passing_8c_aadf15c76db3799e8e60357086ace8757}{arr\+Buffer}, int, N\+U\+LL, S\+\_\+\+I\+W\+U\+SR$\vert$S\+\_\+\+I\+R\+U\+SR$\vert$S\+\_\+\+I\+X\+U\+SR$\vert$S\+\_\+\+I\+W\+G\+RP$\vert$S\+\_\+\+I\+R\+G\+RP$\vert$S\+\_\+\+I\+X\+G\+RP)
+\item 
+\hyperlink{_arg_passing_8c_ab88aa97f5567d5f8d0ad8abce68306e4}{module\+\_\+param\+\_\+cb} (\hyperlink{_arg_passing_8c_a9359a8016fd04b66b0358bd83d24902b}{cb\+Value},\&cb\+\_\+param\+\_\+ops,\&\hyperlink{_arg_passing_8c_a9359a8016fd04b66b0358bd83d24902b}{cb\+Value}, S\+\_\+\+I\+W\+U\+SR$\vert$S\+\_\+\+I\+R\+U\+SR)
+\item 
+\hyperlink{_arg_passing_8c_a27fcfb199210c306c627e1b5f2389eaf}{module\+\_\+init} (Init\+Drv)
+\item 
+\hyperlink{_arg_passing_8c_a1212a8b9c1bac6ccfcaa24a7259a6d52}{module\+\_\+exit} (Remove\+Drv)
+\item 
+\hyperlink{_arg_passing_8c_ad94b36675e7eb067ea3ce6ff9e244a44}{M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+SE} (\char`\"{}G\+PL\char`\"{})
+\item 
+\hyperlink{_arg_passing_8c_a9e21857e0ed7e3c0000f83c5f3ab1436}{M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+OR} (\char`\"{}Divin Raj\char`\"{})
+\item 
+\hyperlink{_arg_passing_8c_a5dfa4eeee274944cb7d3039b9bef350e}{M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON} (\char`\"{}Sample program to passing arguments to exicutable file\char`\"{})
+\item 
+\hyperlink{_arg_passing_8c_a0a436a417572037df486b08a286a76f9}{M\+O\+D\+U\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON} (\char`\"{}v.\+1.\+0\char`\"{})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_arg_passing_8c_a23b7c31b2f6c188e1c281f7be7473f23}{int\+Value} = 0
+\item 
+int \hyperlink{_arg_passing_8c_aadf15c76db3799e8e60357086ace8757}{arr\+Buffer} \mbox{[}5\mbox{]} = \{ 0 \}
+\item 
+char $\ast$ \hyperlink{_arg_passing_8c_a546284a803e6b34e756d45641fae2a2f}{str\+Name} = N\+U\+LL
+\item 
+int \hyperlink{_arg_passing_8c_a9359a8016fd04b66b0358bd83d24902b}{cb\+Value} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file implements a sample testing programe for passing arguments $\ast$. 
+
+
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyItemize}
+\item \begin{DoxyAuthor}{Author}
+\href{mailto:divinraj1994@gmail.com}{\tt divinraj1994@gmail.\+com} $\ast$ 
+\end{DoxyAuthor}
+
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\subsection{Macro Definition Documentation}
+\index{Arg\+Passing.\+c@{Arg\+Passing.\+c}!B\+A\+S\+E\+\_\+\+M\+I\+N\+O\+R\+N\+U\+M\+B\+ER@{B\+A\+S\+E\+\_\+\+M\+I\+N\+O\+R\+N\+U\+M\+B\+ER}}
+\index{B\+A\+S\+E\+\_\+\+M\+I\+N\+O\+R\+N\+U\+M\+B\+ER@{B\+A\+S\+E\+\_\+\+M\+I\+N\+O\+R\+N\+U\+M\+B\+ER}!Arg\+Passing.\+c@{Arg\+Passing.\+c}}
+\subsubsection[{\texorpdfstring{B\+A\+S\+E\+\_\+\+M\+I\+N\+O\+R\+N\+U\+M\+B\+ER}{BASE_MINORNUMBER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+A\+S\+E\+\_\+\+M\+I\+N\+O\+R\+N\+U\+M\+B\+ER~1u}\hypertarget{_arg_passing_8c_a1a25deaba82e340ee1aba6e1f9acd105}{}\label{_arg_passing_8c_a1a25deaba82e340ee1aba6e1f9acd105}
+
+
+  Includes $\ast$
+
+
+
+  specific Macros $\ast$
+
+Number base \index{Arg\+Passing.\+c@{Arg\+Passing.\+c}!E\+\_\+\+N\+O\+T\+\_\+\+OK@{E\+\_\+\+N\+O\+T\+\_\+\+OK}}
+\index{E\+\_\+\+N\+O\+T\+\_\+\+OK@{E\+\_\+\+N\+O\+T\+\_\+\+OK}!Arg\+Passing.\+c@{Arg\+Passing.\+c}}
+\subsubsection[{\texorpdfstring{E\+\_\+\+N\+O\+T\+\_\+\+OK}{E_NOT_OK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+\_\+\+N\+O\+T\+\_\+\+OK~1u}\hypertarget{_arg_passing_8c_a1d155fa7a571f569a380bb42b1947eb4}{}\label{_arg_passing_8c_a1d155fa7a571f569a380bb42b1947eb4}
+\index{Arg\+Passing.\+c@{Arg\+Passing.\+c}!E\+\_\+\+OK@{E\+\_\+\+OK}}
+\index{E\+\_\+\+OK@{E\+\_\+\+OK}!Arg\+Passing.\+c@{Arg\+Passing.\+c}}
+\subsubsection[{\texorpdfstring{E\+\_\+\+OK}{E_OK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+\_\+\+OK~0u}\hypertarget{_arg_passing_8c_a1e7cc741c56207a8872ea58373276925}{}\label{_arg_passing_8c_a1e7cc741c56207a8872ea58373276925}
+Types \index{Arg\+Passing.\+c@{Arg\+Passing.\+c}!M\+I\+N\+O\+R\+N\+U\+M\+B\+E\+R\+\_\+\+R\+A\+N\+GE@{M\+I\+N\+O\+R\+N\+U\+M\+B\+E\+R\+\_\+\+R\+A\+N\+GE}}
+\index{M\+I\+N\+O\+R\+N\+U\+M\+B\+E\+R\+\_\+\+R\+A\+N\+GE@{M\+I\+N\+O\+R\+N\+U\+M\+B\+E\+R\+\_\+\+R\+A\+N\+GE}!Arg\+Passing.\+c@{Arg\+Passing.\+c}}
+\subsubsection[{\texorpdfstring{M\+I\+N\+O\+R\+N\+U\+M\+B\+E\+R\+\_\+\+R\+A\+N\+GE}{MINORNUMBER_RANGE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+I\+N\+O\+R\+N\+U\+M\+B\+E\+R\+\_\+\+R\+A\+N\+GE~1u}\hypertarget{_arg_passing_8c_a15be72134606fa2aae7ce204e75af62a}{}\label{_arg_passing_8c_a15be72134606fa2aae7ce204e75af62a}
+Number Requsted for Minor 
+
+\subsection{Function Documentation}
+\index{Arg\+Passing.\+c@{Arg\+Passing.\+c}!M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+OR@{M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+OR}}
+\index{M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+OR@{M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+OR}!Arg\+Passing.\+c@{Arg\+Passing.\+c}}
+\subsubsection[{\texorpdfstring{M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+O\+R(""Divin Raj"")}{MODULE_AUTHOR("Divin Raj")}}]{\setlength{\rightskip}{0pt plus 5cm}M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+OR (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}Divin Raj\char`\"{}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_arg_passing_8c_a9e21857e0ed7e3c0000f83c5f3ab1436}{}\label{_arg_passing_8c_a9e21857e0ed7e3c0000f83c5f3ab1436}
+\index{Arg\+Passing.\+c@{Arg\+Passing.\+c}!M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON@{M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}}
+\index{M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON@{M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}!Arg\+Passing.\+c@{Arg\+Passing.\+c}}
+\subsubsection[{\texorpdfstring{M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+O\+N(""Sample program to passing arguments to exicutable file"")}{MODULE_DESCRIPTION("Sample program to passing arguments to exicutable file")}}]{\setlength{\rightskip}{0pt plus 5cm}M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}Sample program to passing arguments to exicutable file\char`\"{}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_arg_passing_8c_a5dfa4eeee274944cb7d3039b9bef350e}{}\label{_arg_passing_8c_a5dfa4eeee274944cb7d3039b9bef350e}
+\index{Arg\+Passing.\+c@{Arg\+Passing.\+c}!module\+\_\+exit@{module\+\_\+exit}}
+\index{module\+\_\+exit@{module\+\_\+exit}!Arg\+Passing.\+c@{Arg\+Passing.\+c}}
+\subsubsection[{\texorpdfstring{module\+\_\+exit(\+Remove\+Drv)}{module_exit(RemoveDrv)}}]{\setlength{\rightskip}{0pt plus 5cm}module\+\_\+exit (
+\begin{DoxyParamCaption}
+\item[{Remove\+Drv}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_arg_passing_8c_a1212a8b9c1bac6ccfcaa24a7259a6d52}{}\label{_arg_passing_8c_a1212a8b9c1bac6ccfcaa24a7259a6d52}
+\index{Arg\+Passing.\+c@{Arg\+Passing.\+c}!module\+\_\+init@{module\+\_\+init}}
+\index{module\+\_\+init@{module\+\_\+init}!Arg\+Passing.\+c@{Arg\+Passing.\+c}}
+\subsubsection[{\texorpdfstring{module\+\_\+init(\+Init\+Drv)}{module_init(InitDrv)}}]{\setlength{\rightskip}{0pt plus 5cm}module\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{Init\+Drv}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_arg_passing_8c_a27fcfb199210c306c627e1b5f2389eaf}{}\label{_arg_passing_8c_a27fcfb199210c306c627e1b5f2389eaf}
+
+
+  Init and Exit Macro $\ast$ \index{Arg\+Passing.\+c@{Arg\+Passing.\+c}!M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+SE@{M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+SE}}
+\index{M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+SE@{M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+SE}!Arg\+Passing.\+c@{Arg\+Passing.\+c}}
+\subsubsection[{\texorpdfstring{M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+S\+E(""G\+PL"")}{MODULE_LICENSE("GPL")}}]{\setlength{\rightskip}{0pt plus 5cm}M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+SE (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}G\+PL\char`\"{}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_arg_passing_8c_ad94b36675e7eb067ea3ce6ff9e244a44}{}\label{_arg_passing_8c_ad94b36675e7eb067ea3ce6ff9e244a44}
+
+
+  Informations $\ast$ \index{Arg\+Passing.\+c@{Arg\+Passing.\+c}!module\+\_\+param@{module\+\_\+param}}
+\index{module\+\_\+param@{module\+\_\+param}!Arg\+Passing.\+c@{Arg\+Passing.\+c}}
+\subsubsection[{\texorpdfstring{module\+\_\+param(int\+Value, int, S\+\_\+\+I\+W\+U\+SR\texttt{"|}S\+\_\+\+I\+R\+U\+S\+R)}{module_param(intValue, int, S_IWUSR|S_IRUSR)}}]{\setlength{\rightskip}{0pt plus 5cm}module\+\_\+param (
+\begin{DoxyParamCaption}
+\item[{{\bf int\+Value}}]{, }
+\item[{int}]{, }
+\item[{S\+\_\+\+I\+W\+U\+SR$\vert$}]{S\+\_\+\+I\+R\+U\+SR}
+\end{DoxyParamCaption}
+)}\hypertarget{_arg_passing_8c_adf7a4e51490ae824f3e7a3b53049d6a1}{}\label{_arg_passing_8c_adf7a4e51490ae824f3e7a3b53049d6a1}
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em macros} & $\ast$ \\
+\hline
+\end{DoxyParams}
+\index{Arg\+Passing.\+c@{Arg\+Passing.\+c}!module\+\_\+param@{module\+\_\+param}}
+\index{module\+\_\+param@{module\+\_\+param}!Arg\+Passing.\+c@{Arg\+Passing.\+c}}
+\subsubsection[{\texorpdfstring{module\+\_\+param(str\+Name, charp, S\+\_\+\+I\+W\+U\+SR\texttt{"|}S\+\_\+\+I\+R\+U\+SR\texttt{"|}S\+\_\+\+I\+X\+U\+SR\texttt{"|}S\+\_\+\+I\+W\+G\+RP\texttt{"|}S\+\_\+\+I\+R\+G\+RP\texttt{"|}S\+\_\+\+I\+X\+G\+R\+P)}{module_param(strName, charp, S_IWUSR|S_IRUSR|S_IXUSR|S_IWGRP|S_IRGRP|S_IXGRP)}}]{\setlength{\rightskip}{0pt plus 5cm}module\+\_\+param (
+\begin{DoxyParamCaption}
+\item[{{\bf str\+Name}}]{, }
+\item[{charp}]{, }
+\item[{S\+\_\+\+I\+W\+U\+SR$\vert$S\+\_\+\+I\+R\+U\+SR$\vert$S\+\_\+\+I\+X\+U\+SR$\vert$S\+\_\+\+I\+W\+G\+RP$\vert$S\+\_\+\+I\+R\+G\+RP$\vert$}]{S\+\_\+\+I\+X\+G\+RP}
+\end{DoxyParamCaption}
+)}\hypertarget{_arg_passing_8c_a493ed86a0f80ad11a1bde0aee8b4f69e}{}\label{_arg_passing_8c_a493ed86a0f80ad11a1bde0aee8b4f69e}
+\index{Arg\+Passing.\+c@{Arg\+Passing.\+c}!module\+\_\+param\+\_\+array@{module\+\_\+param\+\_\+array}}
+\index{module\+\_\+param\+\_\+array@{module\+\_\+param\+\_\+array}!Arg\+Passing.\+c@{Arg\+Passing.\+c}}
+\subsubsection[{\texorpdfstring{module\+\_\+param\+\_\+array(arr\+Buffer, int, N\+U\+L\+L, S\+\_\+\+I\+W\+U\+SR\texttt{"|}S\+\_\+\+I\+R\+U\+SR\texttt{"|}S\+\_\+\+I\+X\+U\+SR\texttt{"|}S\+\_\+\+I\+W\+G\+RP\texttt{"|}S\+\_\+\+I\+R\+G\+RP\texttt{"|}S\+\_\+\+I\+X\+G\+R\+P)}{module_param_array(arrBuffer, int, NULL, S_IWUSR|S_IRUSR|S_IXUSR|S_IWGRP|S_IRGRP|S_IXGRP)}}]{\setlength{\rightskip}{0pt plus 5cm}module\+\_\+param\+\_\+array (
+\begin{DoxyParamCaption}
+\item[{{\bf arr\+Buffer}}]{, }
+\item[{int}]{, }
+\item[{N\+U\+LL}]{, }
+\item[{S\+\_\+\+I\+W\+U\+SR$\vert$S\+\_\+\+I\+R\+U\+SR$\vert$S\+\_\+\+I\+X\+U\+SR$\vert$S\+\_\+\+I\+W\+G\+RP$\vert$S\+\_\+\+I\+R\+G\+RP$\vert$}]{S\+\_\+\+I\+X\+G\+RP}
+\end{DoxyParamCaption}
+)}\hypertarget{_arg_passing_8c_a6af02987c05ea1fa1026248f1ce1518b}{}\label{_arg_passing_8c_a6af02987c05ea1fa1026248f1ce1518b}
+\index{Arg\+Passing.\+c@{Arg\+Passing.\+c}!module\+\_\+param\+\_\+cb@{module\+\_\+param\+\_\+cb}}
+\index{module\+\_\+param\+\_\+cb@{module\+\_\+param\+\_\+cb}!Arg\+Passing.\+c@{Arg\+Passing.\+c}}
+\subsubsection[{\texorpdfstring{module\+\_\+param\+\_\+cb(cb\+Value,\&cb\+\_\+param\+\_\+ops,\&cb\+Value, S\+\_\+\+I\+W\+U\+SR\texttt{"|}S\+\_\+\+I\+R\+U\+S\+R)}{module_param_cb(cbValue,&cb_param_ops,&cbValue, S_IWUSR|S_IRUSR)}}]{\setlength{\rightskip}{0pt plus 5cm}module\+\_\+param\+\_\+cb (
+\begin{DoxyParamCaption}
+\item[{{\bf cb\+Value}}]{, }
+\item[{\&}]{cb\+\_\+param\+\_\+ops, }
+\item[{\&}]{cb\+Value, }
+\item[{S\+\_\+\+I\+W\+U\+SR$\vert$}]{S\+\_\+\+I\+R\+U\+SR}
+\end{DoxyParamCaption}
+)}\hypertarget{_arg_passing_8c_ab88aa97f5567d5f8d0ad8abce68306e4}{}\label{_arg_passing_8c_ab88aa97f5567d5f8d0ad8abce68306e4}
+\index{Arg\+Passing.\+c@{Arg\+Passing.\+c}!M\+O\+D\+U\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON@{M\+O\+D\+U\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}
+\index{M\+O\+D\+U\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON@{M\+O\+D\+U\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON}!Arg\+Passing.\+c@{Arg\+Passing.\+c}}
+\subsubsection[{\texorpdfstring{M\+O\+D\+U\+L\+E\+\_\+\+V\+E\+R\+S\+I\+O\+N(""v.\+1.\+0"")}{MODULE_VERSION("v.1.0")}}]{\setlength{\rightskip}{0pt plus 5cm}M\+O\+D\+U\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}v.\+1.\+0\char`\"{}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_arg_passing_8c_a0a436a417572037df486b08a286a76f9}{}\label{_arg_passing_8c_a0a436a417572037df486b08a286a76f9}
+\index{Arg\+Passing.\+c@{Arg\+Passing.\+c}!param\+Set\+\_\+\+Notify@{param\+Set\+\_\+\+Notify}}
+\index{param\+Set\+\_\+\+Notify@{param\+Set\+\_\+\+Notify}!Arg\+Passing.\+c@{Arg\+Passing.\+c}}
+\subsubsection[{\texorpdfstring{param\+Set\+\_\+\+Notify(const char $\ast$val, const struct kernel\+\_\+param $\ast$kp)}{paramSet_Notify(const char *val, const struct kernel_param *kp)}}]{\setlength{\rightskip}{0pt plus 5cm}int param\+Set\+\_\+\+Notify (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{val, }
+\item[{const struct kernel\+\_\+param $\ast$}]{kp}
+\end{DoxyParamCaption}
+)}\hypertarget{_arg_passing_8c_a971a1e45364b44adbd606d1079c0ba8a}{}\label{_arg_passing_8c_a971a1e45364b44adbd606d1079c0ba8a}
+
+
+Handler to notify when variable value get changed $\ast$ $\ast$. 
+
+
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em val} & -\/ updated value $\ast$ kp -\/ param structure $\ast$ $\ast$ $\ast$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success $\ast$ Failed $\ast$
+\end{DoxyReturn}
+
+\item 
+\end{DoxyItemize}
+
+\subsection{Variable Documentation}
+\index{Arg\+Passing.\+c@{Arg\+Passing.\+c}!arr\+Buffer@{arr\+Buffer}}
+\index{arr\+Buffer@{arr\+Buffer}!Arg\+Passing.\+c@{Arg\+Passing.\+c}}
+\subsubsection[{\texorpdfstring{arr\+Buffer}{arrBuffer}}]{\setlength{\rightskip}{0pt plus 5cm}int arr\+Buffer\mbox{[}5\mbox{]} = \{ 0 \}}\hypertarget{_arg_passing_8c_aadf15c76db3799e8e60357086ace8757}{}\label{_arg_passing_8c_aadf15c76db3799e8e60357086ace8757}
+\index{Arg\+Passing.\+c@{Arg\+Passing.\+c}!cb\+Value@{cb\+Value}}
+\index{cb\+Value@{cb\+Value}!Arg\+Passing.\+c@{Arg\+Passing.\+c}}
+\subsubsection[{\texorpdfstring{cb\+Value}{cbValue}}]{\setlength{\rightskip}{0pt plus 5cm}int cb\+Value = 0}\hypertarget{_arg_passing_8c_a9359a8016fd04b66b0358bd83d24902b}{}\label{_arg_passing_8c_a9359a8016fd04b66b0358bd83d24902b}
+\index{Arg\+Passing.\+c@{Arg\+Passing.\+c}!int\+Value@{int\+Value}}
+\index{int\+Value@{int\+Value}!Arg\+Passing.\+c@{Arg\+Passing.\+c}}
+\subsubsection[{\texorpdfstring{int\+Value}{intValue}}]{\setlength{\rightskip}{0pt plus 5cm}int int\+Value = 0}\hypertarget{_arg_passing_8c_a23b7c31b2f6c188e1c281f7be7473f23}{}\label{_arg_passing_8c_a23b7c31b2f6c188e1c281f7be7473f23}
+
+
+  for argument passing $\ast$ \index{Arg\+Passing.\+c@{Arg\+Passing.\+c}!str\+Name@{str\+Name}}
+\index{str\+Name@{str\+Name}!Arg\+Passing.\+c@{Arg\+Passing.\+c}}
+\subsubsection[{\texorpdfstring{str\+Name}{strName}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ str\+Name = N\+U\+LL}\hypertarget{_arg_passing_8c_a546284a803e6b34e756d45641fae2a2f}{}\label{_arg_passing_8c_a546284a803e6b34e756d45641fae2a2f}

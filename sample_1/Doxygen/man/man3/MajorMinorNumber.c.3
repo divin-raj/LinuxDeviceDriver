@@ -1,0 +1,110 @@
+.TH "/home/dvn/Git-Repository/Linux/LinuxDeviceDriver/sample_1/MajorMinorNumber.c" 3 "Mon May 25 2020" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/dvn/Git-Repository/Linux/LinuxDeviceDriver/sample_1/MajorMinorNumber.c \- This file implements a smple testing sample module for Major and Minor Number *\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <linux/module\&.h>\fP
+.br
+\fC#include <linux/init\&.h>\fP
+.br
+\fC#include <linux/fs\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBBASE_MINORNUMBER\fP   1u"
+.br
+.ti -1c
+.RI "#define \fBMINORNUMBER_RANGE\fP   1u"
+.br
+.ti -1c
+.RI "#define \fBE_OK\fP   0u"
+.br
+.ti -1c
+.RI "#define \fBE_NOT_OK\fP   1u"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBmodule_init\fP (InitDrv)"
+.br
+.ti -1c
+.RI "\fBmodule_exit\fP (RemoveDrv)"
+.br
+.ti -1c
+.RI "\fBMODULE_LICENSE\fP ('GPL')"
+.br
+.ti -1c
+.RI "\fBMODULE_AUTHOR\fP ('Divin Raj')"
+.br
+.ti -1c
+.RI "\fBMODULE_DESCRIPTION\fP ('extDrv for Allocating Major and Minor Number')"
+.br
+.ti -1c
+.RI "\fBMODULE_VERSION\fP ('v\&.1\&.0')"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This file implements a smple testing sample module for Major and Minor Number *\&. 
+
+
+.PP
+.IP "\(bu" 2
+.IP "  \(bu" 4
+\fBAuthor:\fP
+.RS 4
+divinraj1994@gmail.com * 
+.RE
+.PP
+
+.PP
+
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define BASE_MINORNUMBER   1u"
+
+.PP
+  Includes *
+.PP
+.PP
+  specific Macros *
+.PP
+Number base 
+.SS "#define E_NOT_OK   1u"
+
+.SS "#define E_OK   0u"
+Types 
+.SS "#define MINORNUMBER_RANGE   1u"
+Number Requsted for Minor 
+.SH "Function Documentation"
+.PP 
+.SS "MODULE_AUTHOR ('Divin Raj')"
+
+.SS "MODULE_DESCRIPTION ('extDrv for Allocating Major and Minor Number')"
+
+.SS "module_exit (RemoveDrv)"
+
+.SS "module_init (InitDrv)"
+
+.PP
+  Init and Exit Macro * 
+.SS "MODULE_LICENSE ('GPL')"
+
+.PP
+  Informations * 
+.SS "MODULE_VERSION ('v\&.1\&.0')"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

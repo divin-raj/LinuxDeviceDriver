@@ -1,0 +1,194 @@
+.TH "/home/dvn/Git-Repository/Linux/LinuxDeviceDriver/sample_2/ArgPassing.c" 3 "Mon May 25 2020" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/dvn/Git-Repository/Linux/LinuxDeviceDriver/sample_2/ArgPassing.c \- This file implements a sample testing programe for passing arguments *\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <linux/init\&.h>\fP
+.br
+\fC#include <linux/fs\&.h>\fP
+.br
+\fC#include <linux/module\&.h>\fP
+.br
+\fC#include <linux/moduleparam\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBBASE_MINORNUMBER\fP   1u"
+.br
+.ti -1c
+.RI "#define \fBMINORNUMBER_RANGE\fP   1u"
+.br
+.ti -1c
+.RI "#define \fBE_OK\fP   0u"
+.br
+.ti -1c
+.RI "#define \fBE_NOT_OK\fP   1u"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBparamSet_Notify\fP (const char *val, const struct kernel_param *kp)"
+.br
+.RI "\fIHandler to notify when variable value get changed * *\&. \fP"
+.ti -1c
+.RI "\fBmodule_param\fP (\fBintValue\fP, int, S_IWUSR|S_IRUSR)"
+.br
+.ti -1c
+.RI "\fBmodule_param\fP (\fBstrName\fP, charp, S_IWUSR|S_IRUSR|S_IXUSR|S_IWGRP|S_IRGRP|S_IXGRP)"
+.br
+.ti -1c
+.RI "\fBmodule_param_array\fP (\fBarrBuffer\fP, int, NULL, S_IWUSR|S_IRUSR|S_IXUSR|S_IWGRP|S_IRGRP|S_IXGRP)"
+.br
+.ti -1c
+.RI "\fBmodule_param_cb\fP (\fBcbValue\fP,&cb_param_ops,&\fBcbValue\fP, S_IWUSR|S_IRUSR)"
+.br
+.ti -1c
+.RI "\fBmodule_init\fP (InitDrv)"
+.br
+.ti -1c
+.RI "\fBmodule_exit\fP (RemoveDrv)"
+.br
+.ti -1c
+.RI "\fBMODULE_LICENSE\fP ('GPL')"
+.br
+.ti -1c
+.RI "\fBMODULE_AUTHOR\fP ('Divin Raj')"
+.br
+.ti -1c
+.RI "\fBMODULE_DESCRIPTION\fP ('Sample program to passing arguments to exicutable file')"
+.br
+.ti -1c
+.RI "\fBMODULE_VERSION\fP ('v\&.1\&.0')"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBintValue\fP = 0"
+.br
+.ti -1c
+.RI "int \fBarrBuffer\fP [5] = { 0 }"
+.br
+.ti -1c
+.RI "char * \fBstrName\fP = NULL"
+.br
+.ti -1c
+.RI "int \fBcbValue\fP = 0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This file implements a sample testing programe for passing arguments *\&. 
+
+
+.PP
+.IP "\(bu" 2
+.IP "  \(bu" 4
+\fBAuthor:\fP
+.RS 4
+divinraj1994@gmail.com * 
+.RE
+.PP
+
+.PP
+
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define BASE_MINORNUMBER   1u"
+
+.PP
+  Includes *
+.PP
+.PP
+  specific Macros *
+.PP
+Number base 
+.SS "#define E_NOT_OK   1u"
+
+.SS "#define E_OK   0u"
+Types 
+.SS "#define MINORNUMBER_RANGE   1u"
+Number Requsted for Minor 
+.SH "Function Documentation"
+.PP 
+.SS "MODULE_AUTHOR ('Divin Raj')"
+
+.SS "MODULE_DESCRIPTION ('Sample program to passing arguments to exicutable file')"
+
+.SS "module_exit (RemoveDrv)"
+
+.SS "module_init (InitDrv)"
+
+.PP
+  Init and Exit Macro * 
+.SS "MODULE_LICENSE ('GPL')"
+
+.PP
+  Informations * 
+.SS "module_param (\fBintValue\fP, int, S_IWUSR| S_IRUSR)"
+
+.PP
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImacros\fP * 
+.RE
+.PP
+
+.SS "module_param (\fBstrName\fP, charp, S_IWUSR|S_IRUSR|S_IXUSR|S_IWGRP|S_IRGRP| S_IXGRP)"
+
+.SS "module_param_array (\fBarrBuffer\fP, int, NULL, S_IWUSR|S_IRUSR|S_IXUSR|S_IWGRP|S_IRGRP| S_IXGRP)"
+
+.SS "module_param_cb (\fBcbValue\fP, & cb_param_ops, & cbValue, S_IWUSR| S_IRUSR)"
+
+.SS "MODULE_VERSION ('v\&.1\&.0')"
+
+.SS "int paramSet_Notify (const char * val, const struct kernel_param * kp)"
+
+.PP
+Handler to notify when variable value get changed * *\&. 
+.PP
+.IP "\(bu" 2
+\fBParameters:\fP
+.RS 4
+\fIval\fP - updated value * kp - param structure * * * 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Success * Failed *
+.RE
+.PP
+
+.IP "\(bu" 2
+
+.PP
+
+.SH "Variable Documentation"
+.PP 
+.SS "int arrBuffer[5] = { 0 }"
+
+.SS "int cbValue = 0"
+
+.SS "int intValue = 0"
+
+.PP
+  for argument passing * 
+.SS "char* strName = NULL"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

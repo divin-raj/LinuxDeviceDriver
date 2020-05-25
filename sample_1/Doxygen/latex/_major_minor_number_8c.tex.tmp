@@ -1,0 +1,126 @@
+\hypertarget{_major_minor_number_8c}{}\section{/home/dvn/\+Git-\/\+Repository/\+Linux/\+Linux\+Device\+Driver/sample\+\_\+1/\+Major\+Minor\+Number.c File Reference}
+\label{_major_minor_number_8c}\index{/home/dvn/\+Git-\/\+Repository/\+Linux/\+Linux\+Device\+Driver/sample\+\_\+1/\+Major\+Minor\+Number.\+c@{/home/dvn/\+Git-\/\+Repository/\+Linux/\+Linux\+Device\+Driver/sample\+\_\+1/\+Major\+Minor\+Number.\+c}}
+
+
+This file implements a smple testing sample module for Major and Minor Number $\ast$.  
+
+
+{\ttfamily \#include $<$linux/module.\+h$>$}\\*
+{\ttfamily \#include $<$linux/init.\+h$>$}\\*
+{\ttfamily \#include $<$linux/fs.\+h$>$}\\*
+Include dependency graph for Major\+Minor\+Number.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_major_minor_number_8c_a1a25deaba82e340ee1aba6e1f9acd105}{B\+A\+S\+E\+\_\+\+M\+I\+N\+O\+R\+N\+U\+M\+B\+ER}~1u
+\item 
+\#define \hyperlink{_major_minor_number_8c_a15be72134606fa2aae7ce204e75af62a}{M\+I\+N\+O\+R\+N\+U\+M\+B\+E\+R\+\_\+\+R\+A\+N\+GE}~1u
+\item 
+\#define \hyperlink{_major_minor_number_8c_a1e7cc741c56207a8872ea58373276925}{E\+\_\+\+OK}~0u
+\item 
+\#define \hyperlink{_major_minor_number_8c_a1d155fa7a571f569a380bb42b1947eb4}{E\+\_\+\+N\+O\+T\+\_\+\+OK}~1u
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_major_minor_number_8c_a27fcfb199210c306c627e1b5f2389eaf}{module\+\_\+init} (Init\+Drv)
+\item 
+\hyperlink{_major_minor_number_8c_a1212a8b9c1bac6ccfcaa24a7259a6d52}{module\+\_\+exit} (Remove\+Drv)
+\item 
+\hyperlink{_major_minor_number_8c_ad94b36675e7eb067ea3ce6ff9e244a44}{M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+SE} (\char`\"{}G\+PL\char`\"{})
+\item 
+\hyperlink{_major_minor_number_8c_a9e21857e0ed7e3c0000f83c5f3ab1436}{M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+OR} (\char`\"{}Divin Raj\char`\"{})
+\item 
+\hyperlink{_major_minor_number_8c_a09d3fe9605f390c21c465bf11d7d20e5}{M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON} (\char`\"{}ext\+Drv for Allocating Major and Minor Number\char`\"{})
+\item 
+\hyperlink{_major_minor_number_8c_a0a436a417572037df486b08a286a76f9}{M\+O\+D\+U\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON} (\char`\"{}v.\+1.\+0\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file implements a smple testing sample module for Major and Minor Number $\ast$. 
+
+
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyItemize}
+\item \begin{DoxyAuthor}{Author}
+\href{mailto:divinraj1994@gmail.com}{\tt divinraj1994@gmail.\+com} $\ast$ 
+\end{DoxyAuthor}
+
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\subsection{Macro Definition Documentation}
+\index{Major\+Minor\+Number.\+c@{Major\+Minor\+Number.\+c}!B\+A\+S\+E\+\_\+\+M\+I\+N\+O\+R\+N\+U\+M\+B\+ER@{B\+A\+S\+E\+\_\+\+M\+I\+N\+O\+R\+N\+U\+M\+B\+ER}}
+\index{B\+A\+S\+E\+\_\+\+M\+I\+N\+O\+R\+N\+U\+M\+B\+ER@{B\+A\+S\+E\+\_\+\+M\+I\+N\+O\+R\+N\+U\+M\+B\+ER}!Major\+Minor\+Number.\+c@{Major\+Minor\+Number.\+c}}
+\subsubsection[{\texorpdfstring{B\+A\+S\+E\+\_\+\+M\+I\+N\+O\+R\+N\+U\+M\+B\+ER}{BASE_MINORNUMBER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+A\+S\+E\+\_\+\+M\+I\+N\+O\+R\+N\+U\+M\+B\+ER~1u}\hypertarget{_major_minor_number_8c_a1a25deaba82e340ee1aba6e1f9acd105}{}\label{_major_minor_number_8c_a1a25deaba82e340ee1aba6e1f9acd105}
+
+
+  Includes $\ast$
+
+
+
+  specific Macros $\ast$
+
+Number base \index{Major\+Minor\+Number.\+c@{Major\+Minor\+Number.\+c}!E\+\_\+\+N\+O\+T\+\_\+\+OK@{E\+\_\+\+N\+O\+T\+\_\+\+OK}}
+\index{E\+\_\+\+N\+O\+T\+\_\+\+OK@{E\+\_\+\+N\+O\+T\+\_\+\+OK}!Major\+Minor\+Number.\+c@{Major\+Minor\+Number.\+c}}
+\subsubsection[{\texorpdfstring{E\+\_\+\+N\+O\+T\+\_\+\+OK}{E_NOT_OK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+\_\+\+N\+O\+T\+\_\+\+OK~1u}\hypertarget{_major_minor_number_8c_a1d155fa7a571f569a380bb42b1947eb4}{}\label{_major_minor_number_8c_a1d155fa7a571f569a380bb42b1947eb4}
+\index{Major\+Minor\+Number.\+c@{Major\+Minor\+Number.\+c}!E\+\_\+\+OK@{E\+\_\+\+OK}}
+\index{E\+\_\+\+OK@{E\+\_\+\+OK}!Major\+Minor\+Number.\+c@{Major\+Minor\+Number.\+c}}
+\subsubsection[{\texorpdfstring{E\+\_\+\+OK}{E_OK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+\_\+\+OK~0u}\hypertarget{_major_minor_number_8c_a1e7cc741c56207a8872ea58373276925}{}\label{_major_minor_number_8c_a1e7cc741c56207a8872ea58373276925}
+Types \index{Major\+Minor\+Number.\+c@{Major\+Minor\+Number.\+c}!M\+I\+N\+O\+R\+N\+U\+M\+B\+E\+R\+\_\+\+R\+A\+N\+GE@{M\+I\+N\+O\+R\+N\+U\+M\+B\+E\+R\+\_\+\+R\+A\+N\+GE}}
+\index{M\+I\+N\+O\+R\+N\+U\+M\+B\+E\+R\+\_\+\+R\+A\+N\+GE@{M\+I\+N\+O\+R\+N\+U\+M\+B\+E\+R\+\_\+\+R\+A\+N\+GE}!Major\+Minor\+Number.\+c@{Major\+Minor\+Number.\+c}}
+\subsubsection[{\texorpdfstring{M\+I\+N\+O\+R\+N\+U\+M\+B\+E\+R\+\_\+\+R\+A\+N\+GE}{MINORNUMBER_RANGE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+I\+N\+O\+R\+N\+U\+M\+B\+E\+R\+\_\+\+R\+A\+N\+GE~1u}\hypertarget{_major_minor_number_8c_a15be72134606fa2aae7ce204e75af62a}{}\label{_major_minor_number_8c_a15be72134606fa2aae7ce204e75af62a}
+Number Requsted for Minor 
+
+\subsection{Function Documentation}
+\index{Major\+Minor\+Number.\+c@{Major\+Minor\+Number.\+c}!M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+OR@{M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+OR}}
+\index{M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+OR@{M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+OR}!Major\+Minor\+Number.\+c@{Major\+Minor\+Number.\+c}}
+\subsubsection[{\texorpdfstring{M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+O\+R(""Divin Raj"")}{MODULE_AUTHOR("Divin Raj")}}]{\setlength{\rightskip}{0pt plus 5cm}M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+OR (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}Divin Raj\char`\"{}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_major_minor_number_8c_a9e21857e0ed7e3c0000f83c5f3ab1436}{}\label{_major_minor_number_8c_a9e21857e0ed7e3c0000f83c5f3ab1436}
+\index{Major\+Minor\+Number.\+c@{Major\+Minor\+Number.\+c}!M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON@{M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}}
+\index{M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON@{M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}!Major\+Minor\+Number.\+c@{Major\+Minor\+Number.\+c}}
+\subsubsection[{\texorpdfstring{M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+O\+N(""ext\+Drv for Allocating Major and Minor Number"")}{MODULE_DESCRIPTION("extDrv for Allocating Major and Minor Number")}}]{\setlength{\rightskip}{0pt plus 5cm}M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}ext\+Drv for Allocating Major and Minor Number\char`\"{}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_major_minor_number_8c_a09d3fe9605f390c21c465bf11d7d20e5}{}\label{_major_minor_number_8c_a09d3fe9605f390c21c465bf11d7d20e5}
+\index{Major\+Minor\+Number.\+c@{Major\+Minor\+Number.\+c}!module\+\_\+exit@{module\+\_\+exit}}
+\index{module\+\_\+exit@{module\+\_\+exit}!Major\+Minor\+Number.\+c@{Major\+Minor\+Number.\+c}}
+\subsubsection[{\texorpdfstring{module\+\_\+exit(\+Remove\+Drv)}{module_exit(RemoveDrv)}}]{\setlength{\rightskip}{0pt plus 5cm}module\+\_\+exit (
+\begin{DoxyParamCaption}
+\item[{Remove\+Drv}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_major_minor_number_8c_a1212a8b9c1bac6ccfcaa24a7259a6d52}{}\label{_major_minor_number_8c_a1212a8b9c1bac6ccfcaa24a7259a6d52}
+\index{Major\+Minor\+Number.\+c@{Major\+Minor\+Number.\+c}!module\+\_\+init@{module\+\_\+init}}
+\index{module\+\_\+init@{module\+\_\+init}!Major\+Minor\+Number.\+c@{Major\+Minor\+Number.\+c}}
+\subsubsection[{\texorpdfstring{module\+\_\+init(\+Init\+Drv)}{module_init(InitDrv)}}]{\setlength{\rightskip}{0pt plus 5cm}module\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{Init\+Drv}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_major_minor_number_8c_a27fcfb199210c306c627e1b5f2389eaf}{}\label{_major_minor_number_8c_a27fcfb199210c306c627e1b5f2389eaf}
+
+
+  Init and Exit Macro $\ast$ \index{Major\+Minor\+Number.\+c@{Major\+Minor\+Number.\+c}!M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+SE@{M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+SE}}
+\index{M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+SE@{M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+SE}!Major\+Minor\+Number.\+c@{Major\+Minor\+Number.\+c}}
+\subsubsection[{\texorpdfstring{M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+S\+E(""G\+PL"")}{MODULE_LICENSE("GPL")}}]{\setlength{\rightskip}{0pt plus 5cm}M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+SE (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}G\+PL\char`\"{}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_major_minor_number_8c_ad94b36675e7eb067ea3ce6ff9e244a44}{}\label{_major_minor_number_8c_ad94b36675e7eb067ea3ce6ff9e244a44}
+
+
+  Informations $\ast$ \index{Major\+Minor\+Number.\+c@{Major\+Minor\+Number.\+c}!M\+O\+D\+U\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON@{M\+O\+D\+U\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}
+\index{M\+O\+D\+U\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON@{M\+O\+D\+U\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON}!Major\+Minor\+Number.\+c@{Major\+Minor\+Number.\+c}}
+\subsubsection[{\texorpdfstring{M\+O\+D\+U\+L\+E\+\_\+\+V\+E\+R\+S\+I\+O\+N(""v.\+1.\+0"")}{MODULE_VERSION("v.1.0")}}]{\setlength{\rightskip}{0pt plus 5cm}M\+O\+D\+U\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}v.\+1.\+0\char`\"{}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_major_minor_number_8c_a0a436a417572037df486b08a286a76f9}{}\label{_major_minor_number_8c_a0a436a417572037df486b08a286a76f9}
