@@ -167,7 +167,7 @@ module_exit(RemoveDrv);
  ********************************************************************************************************************/
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Divin Raj");
-MODULE_DESCRIPTION("extDrv for Allocating Major and Minor Number");
+MODULE_DESCRIPTION("Sample program to passing arguments to exicutable file");
 MODULE_VERSION("v.1.0");
 
 /******************************************END OF FILE **************************************************************/
