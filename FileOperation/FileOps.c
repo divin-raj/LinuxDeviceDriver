@@ -179,7 +179,7 @@ static int __init InitDrv(void)
 
 	cdev_init(&extCdev,&fops);
 
-	if((cdev_add(&extCdev,dev,1)) < 1)
+	if((cdev_add(&extCdev,dev,1)) < 0)
 	{
 		printk(KERN_INFO "Char device failed registered..!!\n");
 	}
