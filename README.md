@@ -1,1 +1,1 @@
-Sample programs for Linux Device driver learnings
+Sample programs for Linux device driver learnings
